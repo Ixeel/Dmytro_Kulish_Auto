@@ -3,37 +3,45 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.Color;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class SeleniumTest {
+    private WebDriver driver;
+    @BeforeMethod
+    public void setup(){
+        driver = new ChromeDriver();
+    }
+    @AfterMethod
+    public void afterMethod(){
+        driver.quit();
+    }
+    @Test
+    public void checkHeaderLogo(){
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
+        WebElement headerLogo = driver.findElement(By.className("header_logo"));
+        boolean logo =  headerLogo.isDisplayed();
+        if(logo){
+            System.out.println("Logo displayed");
+        }
+        else {
+            System.out.println("Logo does not displayed");
+        }
+    }
 
-    public static void main(String[] args) {
-        WebDriver driver = null;
-        try {
-            System.setProperty("webdriver.chrome.driver", "C://chromedriver/chromedriver.exe");
-            driver = new ChromeDriver();
-            driver.get("https://guest:welcome2qauto@qauto.forstudy.space/panel/garage");
-
-            WebElement element = driver.findElement(By.xpath("//button[contains(@class, 'header-link -guest')]"));
-            element.click();
-
-            element = driver.findElement(By.xpath("//a[contains(@routerlink, '/panel/garage')]"));
-            System.out.println(element.getText());
-
-            WebElement element2 = driver.findElement(By.xpath("//a[contains(@routerlink, '/panel/expenses')]"));
-            System.out.println(element2.getText());
-
-            WebElement element3 = driver.findElement(By.xpath("//a[contains(@routerlink, '/panel/instructions')]"));
-            System.out.println(element3.getText());
-
-            WebElement element4 = driver.findElement(By.id("userNavDropdown"));
-            System.out.println(element4.getText());
-        } catch (Exception e) {
-            System.out.println("An error occurred: " + e.getMessage());
-        } finally {
-            if (driver != null) {
-                driver.quit();
-            }
+    @Test
+    public void checkSignUpButtonColor(){
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
+        WebElement button = driver.findElement(By.xpath("//button[text()='Sign up']"));
+        String color = button.getCssValue("background-color");
+        String hex = Color.fromString(color).asHex();
+        if(hex.equals("#0275d8")){
+            System.out.println("Background color of Sign up button is correct");
+        }
+        else{
+            System.out.println("Background color of Sign up button is incorrect");
         }
     }
 }
