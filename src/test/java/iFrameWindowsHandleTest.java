@@ -49,8 +49,8 @@ public class iFrameWindowsHandleTest {
             link.click();
             Set<String> handles = driver.getWindowHandles();
             List<String> listHandles = new ArrayList<>(handles);
-            driver.switchTo().window(listHandles.get(1));
             Assert.assertEquals(listHandles.size(), 2, "New tab did not open after clicking");
+            driver.switchTo().window(listHandles.get(1));
             url = driver.getCurrentUrl();
             if(pageUrl.equals("https://www.youtube.com/user/HillelITSchool?sub_confirmation=1")){
                 Assert.assertTrue(url.contains("https://www.youtube.com/user/HillelITSchool"), "Incorrect url of Social network");
