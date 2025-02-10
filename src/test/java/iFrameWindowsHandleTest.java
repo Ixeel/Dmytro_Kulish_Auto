@@ -44,14 +44,13 @@ public class iFrameWindowsHandleTest {
         List<WebElement> links = driver.findElements(By.cssSelector("a.socials_link"));
         Assert.assertEquals(links.size(), 5, "Social network block doesn’t contain 5 items ");
         String url;
-        String defaultUrl = driver.getCurrentUrl();
         for (WebElement link : links) {
             String pageUrl = link.getDomAttribute("href");
             link.click();
             Set<String> handles = driver.getWindowHandles();
             List<String> listHandles = new ArrayList<>(handles);
             driver.switchTo().window(listHandles.get(1));
-            Assert.assertNotEquals(defaultUrl, driver.getCurrentUrl());
+            Assert.assertEquals(listHandles.size(), 2, "New tab did not open after clicking");
             url = driver.getCurrentUrl();
             if(pageUrl.equals("https://www.youtube.com/user/HillelITSchool?sub_confirmation=1")){
                 Assert.assertTrue(url.contains("https://www.youtube.com/user/HillelITSchool"), "Incorrect url of Social network");
