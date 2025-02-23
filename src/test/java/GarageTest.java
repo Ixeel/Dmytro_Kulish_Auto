@@ -23,7 +23,7 @@ public class GarageTest {
     }
 
     @Test
-    public void checkAddingCarToGarage() throws InterruptedException {
+    public void checkAddingCarToGarage() {
         new HomePage()
                 .open()
                 .clickLoginButton();

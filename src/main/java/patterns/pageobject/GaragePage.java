@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
+
 public class GaragePage {
     private WebDriver driver;
     private By BrandSelect = By.id("addCarBrand");
@@ -42,9 +44,9 @@ public class GaragePage {
         driver.findElement(MileageField).sendKeys(mileage);
         return this;
 
-    }   public GaragePage addButtonClick() throws InterruptedException {
+    }   public GaragePage addButtonClick() {
         driver.findElement(AddButton).click();
-        Thread.sleep(500);
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         return this;
     }
     public boolean carCardIsDisplayed(){
