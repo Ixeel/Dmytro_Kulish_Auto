@@ -18,8 +18,8 @@ public class GaragePage {
     private By Mileage = By.xpath("//input[@name='miles']");
     private By Image = By.cssSelector("img.car-logo_img");
 
-    public GaragePage (WebDriver driver){
-        this.driver = driver;
+    public GaragePage (){
+        this.driver = BrowserFactory.getDriver();
     }
     public GaragePage clickAddButton(){
         driver.findElement(AddCarButton).click();

@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import patterns.pageobject.BrowserFactory;
 import patterns.pageobject.GaragePage;
 import patterns.pageobject.HomePage;
 
@@ -12,7 +13,8 @@ public class GarageAddCarTest {
     private WebDriver driver;
     @BeforeMethod
     public void setup() {
-        driver = new ChromeDriver();
+     BrowserFactory.createDriver("chrome");
+     driver = BrowserFactory.getDriver();
     }
     @AfterMethod
     public void tearDown() {
@@ -21,13 +23,13 @@ public class GarageAddCarTest {
 
     @Test
     public void checkAddingCarToGarage() throws InterruptedException {
-        new HomePage(driver)
+        new HomePage()
                 .open()
                 .clickLoginButton();
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://guest:welcome2qauto@qauto.forstudy.space/panel/garage");
 
-        new GaragePage(driver)
+        new GaragePage()
                 .clickAddButton()
                 .selectBrandAudi()
                 .selectModelTT()
@@ -35,11 +37,11 @@ public class GarageAddCarTest {
                 .addButtonClick();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(new GaragePage(driver).carCardIsDisplayed());
-        softAssert.assertTrue(new GaragePage(driver).getCarDate().contains("23.02.2025"));
-        softAssert.assertEquals(new GaragePage(driver).getMileage(), "20");
-        softAssert.assertTrue(new GaragePage(driver).imageIsDisplayed());
-        softAssert.assertTrue(new GaragePage(driver).getImageSrc().endsWith("audi.png"));
+        softAssert.assertTrue(new GaragePage().carCardIsDisplayed());
+        softAssert.assertTrue(new GaragePage().getCarDate().contains("23.02.2025"));
+        softAssert.assertEquals(new GaragePage().getMileage(), "20");
+        softAssert.assertTrue(new GaragePage().imageIsDisplayed());
+        softAssert.assertTrue(new GaragePage().getImageSrc().endsWith("audi.png"));
         softAssert.assertAll();
     }
 }
