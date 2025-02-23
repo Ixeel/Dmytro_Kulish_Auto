@@ -1,19 +1,20 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import patterns.pageobject.BrowserFactory;
 import patterns.pageobject.GaragePage;
 import patterns.pageobject.HomePage;
 
-public class GarageAddCarTest {
+public class GarageTest {
     private WebDriver driver;
     @BeforeMethod
-    public void setup() {
-     BrowserFactory.createDriver("chrome");
+    @Parameters("browser")
+    public void setup(String browser) {
+     BrowserFactory.createDriver(browser);
      driver = BrowserFactory.getDriver();
     }
     @AfterMethod
