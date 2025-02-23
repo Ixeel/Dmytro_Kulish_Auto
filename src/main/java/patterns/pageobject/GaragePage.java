@@ -21,7 +21,7 @@ public class GaragePage {
     public GaragePage (){
         this.driver = BrowserFactory.getDriver();
     }
-    public GaragePage clickAddButton(){
+    public GaragePage clickAddCarButton(){
         driver.findElement(AddCarButton).click();
         return this;
     }

@@ -19,7 +19,7 @@ public class GarageTest {
     }
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+       BrowserFactory.getDriver().quit();
     }
 
     @Test
@@ -31,7 +31,7 @@ public class GarageTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://guest:welcome2qauto@qauto.forstudy.space/panel/garage");
 
         new GaragePage()
-                .clickAddButton()
+                .clickAddCarButton()
                 .selectBrandAudi()
                 .selectModelTT()
                 .setMileage("20")
