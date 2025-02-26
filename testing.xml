@@ -1,0 +1,15 @@
+<suite name="GarageTests">
+    <test name="CheckAddingCarChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="GarageTest"/>
+        </classes>
+    </test>
+
+    <test name="CheckAddingCarFirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="GarageTest"/>
+        </classes>
+    </test>
+</suite>
