@@ -19,6 +19,7 @@ public class GaragePage {
     private By Date = By.cssSelector("p.car_update-mileage");
     private By Mileage = By.xpath("//input[@name='miles']");
     private By Image = By.cssSelector("img.car-logo_img");
+    private By InstructionsButton = By.cssSelector("span.icon.icon-instructions");
 
     public GaragePage (){
         this.driver = BrowserFactory.getDriver();
@@ -64,6 +65,11 @@ public class GaragePage {
     }
     public String getImageSrc(){
         return driver.findElement(Image).getDomAttribute("src");
+    }
+    public GaragePage clickInstructionsButton() {
+        driver.findElement(InstructionsButton).click();
+        return this;
+
     }
 }
 
