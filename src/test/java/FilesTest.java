@@ -40,20 +40,16 @@ public class FilesTest {
     }
 
     @Test
-    public void checkWritingAvailableCarsInFile() throws IOException {
+    public void checkWritingAvailableCarsInFile() {
         new HomePage()
                 .open()
                 .clickLoginButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://guest:welcome2qauto@qauto.forstudy.space/panel/garage");
         new GaragePage()
                 .clickInstructionsButton();
-        try {
-            new InstructionsPage()
-                    .clickButtonCarOption()
-                    .GetElementsAndWriteInFile();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        new InstructionsPage()
+                .clickButtonCarOption()
+                .GetElementsAndWriteInFile();
         Assert.assertTrue(new InstructionsPage().readFile());
     }
 }
