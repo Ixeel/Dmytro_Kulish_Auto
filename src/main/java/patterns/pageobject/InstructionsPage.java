@@ -64,7 +64,7 @@ public class InstructionsPage {
             throw new RuntimeException(e);
         }
     }
-    public List<String> GetElementsAndWriteInFile() {
+    public List<String> getElementsAndWriteInFile() {
         List<WebElement> elements = driver.findElements(By.cssSelector("li.brand-select-dropdown_item"));
         List<String> textList = new ArrayList<>();
         for (WebElement element : elements) {

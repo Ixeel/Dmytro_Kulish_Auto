@@ -49,7 +49,7 @@ public class FilesTest {
                 .clickInstructionsButton();
         new InstructionsPage()
                 .clickButtonCarOption()
-                .GetElementsAndWriteInFile();
+                .getElementsAndWriteInFile();
         Assert.assertTrue(new InstructionsPage().readFile());
     }
 }
