@@ -6,14 +6,14 @@ public class HomePage {
     private WebDriver driver;
     private By GuestLoginButton = By.xpath("//button[text()=\"Guest log in\"]");
 
-    public HomePage (){
+    public HomePage () {
         this.driver = BrowserFactory.getDriver();
     }
-    public HomePage clickLoginButton(){
+    public HomePage clickLoginButton() {
         driver.findElement(GuestLoginButton).click();
         return this;
     }
-    public HomePage open(){
+    public HomePage open() {
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         return this;
     }

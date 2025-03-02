@@ -22,10 +22,10 @@ private static WebDriver driver;
                 throw new IllegalArgumentException("Browser type not supported: " + browserName);
         }
     }
-    public static void tearDown(){
+    public static void tearDown() {
         driver.quit();
     }
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return driver;
     }
 }
