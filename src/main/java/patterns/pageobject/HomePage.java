@@ -1,6 +1,9 @@
 package patterns.pageobject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class HomePage {
     private WebDriver driver;
@@ -17,5 +20,9 @@ public class HomePage {
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         return this;
     }
-
+    @Step("Check that panel/garage page is opened")
+    public HomePage verifyCorrectPageIsOpened() {
+        Assert.assertEquals(driver.getCurrentUrl(), "https://guest:welcome2qauto@qauto.forstudy.space/panel/garage");
+        return this;
+    }
 }
