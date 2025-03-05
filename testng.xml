@@ -1,0 +1,8 @@
+<suite name="GarageTests">
+    <test name="checkAddingCarToGarageWithAllureReport">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="AllureReportTest"/>
+        </classes>
+    </test>
+</suite>
