@@ -1,4 +1,5 @@
 package patterns.pageobject;
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,6 +10,8 @@ private static WebDriver driver;
         switch (browserName.toLowerCase()) {
             case "chrome":
                 driver = new ChromeDriver();
+                driver.manage().window().maximize();
+                WebDriverRunner.setWebDriver(driver);
                 break;
 
             case "firefox":
