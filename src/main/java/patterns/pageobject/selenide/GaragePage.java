@@ -48,7 +48,7 @@ public class GaragePage {
     }
 
     public String getMileage() {
-        return executeJavaScript("return arguments[0].value;", $(Mileage));
+        return $(Mileage).getAttribute("value");
     }
 
     public SelenideElement getImage() {

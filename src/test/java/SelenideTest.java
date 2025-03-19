@@ -32,7 +32,7 @@ public class SelenideTest {
                 .setMileage("20")
                 .addButtonClick()
                 .getCarCard().shouldBe(visible);
-        new GaragePage().getCarDate().shouldHave(text("16.03.2025"));
+        new GaragePage().getCarDate().shouldHave(text("19.03.2025"));
         Assert.assertEquals(new GaragePage().getMileage(), "20");
         new GaragePage().getImage().shouldBe(visible).shouldHave(attributeMatching("src", ".*audi\\.png$"));
     }
