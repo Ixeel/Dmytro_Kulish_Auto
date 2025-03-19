@@ -1,5 +1,6 @@
 package patterns.pageobject.selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.support.ui.Select;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -47,8 +48,8 @@ public class GaragePage {
         return $(Date);
     }
 
-    public String getMileage() {
-        return $(Mileage).getAttribute("value");
+    public SelenideElement getMileage() {
+        return $(Mileage);
     }
 
     public SelenideElement getImage() {
