@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="935ca79f-c435-4e4e-948a-bcb05986a19f" name="Changes" comment="Added remote tests">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="DDT_Tests" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2sE1Kwq9zF4mBoI7SsOE3XbAAgk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "SelenideTesting",
+    "last_directory_selection": "C:/Users/User/IdeaProjects/untitled10/src/test/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Docker"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\untitled10" />
+      <recent name="C:\Users\User\IdeaProjects\untitled10\.idea" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.SelenideTest.checkAddingCarToGarage">
+    <configuration name="AllureReportTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AllureReportTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllureReportTest.checkAddingCarToGarageWithAllureReport" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AllureReportTest" />
+      <option name="METHOD_NAME" value="checkAddingCarToGarageWithAllureReport" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GarageTest.checkAddingCarToGarage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GarageTest" />
+      <option name="METHOD_NAME" value="checkAddingCarToGarage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelenideTest.checkAddingCarToGarage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelenideTest" />
+      <option name="METHOD_NAME" value="checkAddingCarToGarage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iFrame_WindowsHandle_Test.checkSocialsInFooter" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="iFrame_WindowsHandle_Test" />
+      <option name="METHOD_NAME" value="checkSocialsInFooter" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.AllureReportTest" />
+      <item itemvalue="TestNG.AllureReportTest.checkAddingCarToGarageWithAllureReport" />
+      <item itemvalue="TestNG.GarageTest.checkAddingCarToGarage" />
+      <item itemvalue="TestNG.SelenideTest.checkAddingCarToGarage" />
+      <item itemvalue="TestNG.iFrame_WindowsHandle_Test.checkSocialsInFooter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.iFrame_WindowsHandle_Test.checkSocialsInFooter" />
+        <item itemvalue="TestNG.GarageTest.checkAddingCarToGarage" />
+        <item itemvalue="TestNG.AllureReportTest.checkAddingCarToGarageWithAllureReport" />
+        <item itemvalue="TestNG.AllureReportTest" />
+        <item itemvalue="TestNG.SelenideTest.checkAddingCarToGarage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="935ca79f-c435-4e4e-948a-bcb05986a19f" name="Changes" comment="" />
+      <created>1738005860568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738005860568</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added selenideTests">
+      <option name="closed" value="true" />
+      <created>1742130624402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742130624402</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added selenideTests">
+      <option name="closed" value="true" />
+      <created>1742131629435</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742131629435</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed mileageCheck">
+      <option name="closed" value="true" />
+      <created>1742414042826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742414042826</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed mileageCheck">
+      <option name="closed" value="true" />
+      <created>1742414311299</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742414311299</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added DDT_Tests">
+      <option name="closed" value="true" />
+      <created>1742653568084</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742653568085</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added remote tests">
+      <option name="closed" value="true" />
+      <created>1742764162797</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742764162797</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added remote tests">
+      <option name="closed" value="true" />
+      <created>1742764463999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742764463999</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added selenideTests" />
+    <MESSAGE value="Fixed mileageCheck" />
+    <MESSAGE value="Added DDT_Tests" />
+    <MESSAGE value="Added remote tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added remote tests" />
+  </component>
+</project>

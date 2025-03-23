@@ -22,6 +22,16 @@
         <artifactId>allure-testng</artifactId>
         <version>2.23.0</version>
     </dependency>
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>5.9.2</version>
+    </dependency>
+    <dependency>
+        <groupId>com.codeborne</groupId>
+        <artifactId>selenide</artifactId>
+        <version>7.7.0</version>
+    </dependency>
 </dependencies>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
