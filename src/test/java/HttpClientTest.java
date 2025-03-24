@@ -20,9 +20,11 @@ public class HttpClientTest {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonResponse = objectMapper.readTree(response.body());
             boolean idExists = jsonResponse.findValuesAsText("id").contains("1");
+            boolean isTitleAudi = jsonResponse.findValuesAsText("title").contains("Audi");
             SoftAssert softAssert = new SoftAssert();
             softAssert.assertEquals(response.statusCode(), 200);
             softAssert.assertTrue(idExists);
+            softAssert.assertTrue(isTitleAudi);
             softAssert.assertAll();
         } catch (Exception e) {
             e.printStackTrace();
