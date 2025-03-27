@@ -36,7 +36,7 @@ public class AllureReportTest {
         SoftAssert softAssert = new SoftAssert();
         new HomePage()
                 .open()
-                .clickLoginButton()
+                .clickGuestLogIn()
                 .verifyCorrectPageIsOpened();
 
         new GaragePage()
@@ -46,7 +46,7 @@ public class AllureReportTest {
                 .setMileage("20")
                 .addButtonClick()
                 .verifyCarCardIsDisplayed(softAssert)
-                .verifyCarDate(softAssert, "05.03.2025")
+                .verifyCarDate(softAssert, "27.03.2025")
                 .verifyMileage(softAssert, "20")
                 .verifyImageIsDisplayed(softAssert)
                 .verifyCarImage(softAssert, "audi.png");

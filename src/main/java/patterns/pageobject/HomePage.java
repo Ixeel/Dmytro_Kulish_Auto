@@ -30,6 +30,10 @@ public class HomePage {
         driver.findElement(SignInButton).click();
         return this;
     }
+    public HomePage clickGuestLogIn() {
+        driver.findElement(GuestLoginButton).click();
+        return this;
+    }
     public HomePage open() {
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         return this;
