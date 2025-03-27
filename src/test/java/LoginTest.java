@@ -31,4 +31,9 @@ public class LoginTest {
                 .clickLoginButton();
         Assert.assertTrue(new HomePage().getAlertMessage().isDisplayed());
     }
+
+    @Test(groups = {"ui"})
+    public void LoginSuccess() {
+        System.out.println("Login success");
+    }
 }
