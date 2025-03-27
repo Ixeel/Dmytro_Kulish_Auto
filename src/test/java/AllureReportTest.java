@@ -46,7 +46,7 @@ public class AllureReportTest {
                 .setMileage("20")
                 .addButtonClick()
                 .verifyCarCardIsDisplayed(softAssert)
-                .verifyCarDate(softAssert, "27.03.2025")
+                .verifyCarDate(softAssert, "28.03.2025")
                 .verifyMileage(softAssert, "20")
                 .verifyImageIsDisplayed(softAssert)
                 .verifyCarImage(softAssert, "audi.png");

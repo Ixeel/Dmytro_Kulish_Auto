@@ -1,7 +1,6 @@
 package patterns.pageobject;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -14,21 +13,21 @@ import java.util.Map;
 
 public class BrowserFactory {
     private static WebDriver driver;
-    public static void createRemoteDriver(String browserName) {
+    public static void createDriver(String browserName) {
         switch (browserName.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-//                Map<String, Object> prefs = new HashMap<>();
-//                prefs.put("profile.default_content_settings.popups", 0);
-//                prefs.put("download.default_directory", "C:\\Users\\User\\IdeaProjects\\untitled10\\target");
+                Map<String, Object> prefs = new HashMap<>();
+                prefs.put("profile.default_content_settings.popups", 0);
+                prefs.put("download.default_directory", "C:\\Users\\User\\IdeaProjects\\untitled10\\target");
                 ChromeOptions options = new ChromeOptions();
-//                options.setExperimentalOption("prefs", prefs);
-
-//                try {
-//                    driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
-//                } catch (MalformedURLException e) {
-//                    throw new RuntimeException(e);
-//                }
+                options.setExperimentalOption("prefs", prefs);
+//                driver = new ChromeDriver(options);
+                try {
+                    driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
                 driver.manage().window().maximize();
                 break;
 
@@ -44,35 +43,6 @@ public class BrowserFactory {
 
             case "edge":
                 driver = new EdgeDriver();
-                break;
-
-            default:
-                throw new IllegalArgumentException("Browser type not supported: " + browserName);
-        }
-    }
-
-
-    public static void createDriver(String browserName) {
-        switch (browserName.toLowerCase()) {
-            case "chrome":
-                Map<String, Object> prefs = new HashMap<>();
-                prefs.put("profile.default_content_settings.popups", 0);
-                prefs.put("download.default_directory", "C:\\Users\\User\\IdeaProjects\\untitled10\\target");
-                ChromeOptions options = new ChromeOptions();
-                options.setExperimentalOption("prefs", prefs);
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                driver.manage().window().maximize();
-                break;
-
-            case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444"), firefoxOptions);
-                } catch (MalformedURLException e) {
-                    throw new RuntimeException(e);
-                }
-                driver.manage().window().maximize();
                 break;
 
             default:
