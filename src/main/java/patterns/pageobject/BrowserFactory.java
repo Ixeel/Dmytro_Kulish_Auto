@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import ui.projectconfig.ProjectConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,7 +25,7 @@ public class BrowserFactory {
                 options.setExperimentalOption("prefs", prefs);
 //                driver = new ChromeDriver(options);
                 try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+                    driver = new RemoteWebDriver(new URL(ProjectConfig.REMOTE_URL), options);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
@@ -34,7 +35,7 @@ public class BrowserFactory {
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444"), firefoxOptions);
+                    driver = new RemoteWebDriver(new URL(ProjectConfig.REMOTE_URL), firefoxOptions);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
